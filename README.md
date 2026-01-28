@@ -13,24 +13,25 @@ Temporizador Automático: La sesión de grabación se detiene automáticamente a
 
 Modo Local: Configurado para cargar los modelos de Inteligencia Artificial (MediaPipe Face Mesh) desde carpetas locales.
 
-📂 Estructura del Proyecto (¡Importante!)
-Para que la aplicación funcione sin errores, la estructura de carpetas debe ser exactamente la siguiente:
+## 📂 Estructura del Proyecto
 
-Plaintext
-Nombre-Del-Proyecto/
-│
-├── index.html           # Estructura principal
-├── eye-tracking.js      # Lógica de WebGazer y Heatmap
-├── styles.css           # Estilos personalizados
-├── bootstrap.css        # Framework CSS
-│
-└── mediapipe/           # ⚠️ CARPETA CRÍTICA PARA LA IA
+    ```
+    Nombre-Del-Proyecto/
+    │
+    ├── index.html           # Estructura principal
+    ├── eye-tracking.js      # Lógica de WebGazer y Heatmap
+    ├── styles.css           # Estilos personalizados
+    ├── bootstrap.css        # Framework CSS
+    │
+    └── mediapipe/           # ⚠️ CARPETA CRÍTICA PARA LA IA
     └── face_mesh/
         ├── face_mesh.binarypb
         ├── face_mesh_solution_packed_assets.data
         ├── face_mesh_solution_packed_assets_loader.js
         ├── face_mesh_solution_simd_wasm_bin.js
         └── face_mesh_solution_simd_wasm_bin.wasm
+
+        
 Nota: La carpeta mediapipe/face_mesh contiene los binarios necesarios para que el motor de detección facial funcione sin conexión a internet o sin depender de CDNs externos que pueden fallar.
 
 🚀 Instalación y Ejecución
