@@ -1,0 +1,105 @@
+/* Mejora inclusiva #1: Skip link */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+  width:auto;
+  height:auto;
+  padding:.5rem .75rem;
+  z-index:9999;
+  background:#fff;
+  border:2px solid #000;
+}
+
+/* Mejora inclusiva #2: Foco visible para teclado */
+:focus-visible{
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Mejora inclusiva #3: Legibilidad */
+html{ font-size: 16px; }
+body{ line-height: 1.6; }
+p{ max-width: 75ch; }
+
+/* Avatar */
+.avatar{
+  border-radius: 999px;
+  object-fit: cover;
+  border: 8px solid #e8d8bd;
+}
+
+/* Icono contacto */
+.contact-icon{
+  font-size: 3rem;
+}
+
+/* Enlaces claros */
+.link-strong{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+  text-align: center;
+}
+
+/* Para que en Contacto no afecte el max-width de los <p> */
+#contacto p{ max-width: none; }
+
+.header-band{
+  background: #6f42c1; 
+}
+
+.header-band .nav-link{
+  color: #fff;
+}
+
+.page-bg{
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  background: #1f1f1f;   /* fondo exterior */
+}
+
+.page-box{
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;  /* recuadro blanco */
+  border-radius: 8px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.25);
+  overflow: hidden;
+}
+
+#heatmapContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.tracker-panel{
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  background: rgba(255,255,255,.95);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .5rem;
+  padding: .75rem;
+  max-width: 320px;
+}
+

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Branni Bazurto | Portafolio</title>
+
+  <!-- Bootstrap (tu tema) -->
+  <link rel="stylesheet" href="bootstrap.css" />
+  <!-- Tus mejoras accesibles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Mejora inclusiva #1: Skip link -->
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="border-bottom header-band">
+    <nav class="container py-3" aria-label="Navegación principal">
+      <ul class="nav gap-3">
+        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" class="container py-5">
+    <!-- H1 único -->
+    <h1 class="mb-2">Branni Bazurto</h1>
+
+    <!-- Justificación/objetivo breve + CTA -->
+    <p class="lead">
+      Portafolio web responsivo para presentar mi perfil y facilitar un contacto rápido.
+    </p>
+
+    <!-- Call To Action -->
+    <a id="cta" class="btn btn-primary mb-4" href="#contacto">
+      Contáctame (CTA)
+    </a>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="py-4" aria-labelledby="titulo-sobre-mi">
+      <h2 id="titulo-sobre-mi" class="mb-4">Sobre mí</h2>
+
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-md-4 text-center">
+          <img
+            src="assets/img/perfil.jpg"
+            class="avatar"
+            alt="Foto de perfil de Branni Bazurto"
+            width="180"
+            height="180"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="col-12 col-md-8">
+          <h3 class="h4 mb-2">Datos personales</h3>
+          <p>
+            Soy estudiante y desarrollador con interés en desarrollo web, diseño de interfaces y análisis de datos.
+            Me enfoco en crear experiencias claras y fáciles de usar.
+          </p>
+          <p class="mb-0">
+            <strong>Intereses:</strong> UI/UX, desarrollo web, analítica y ciberseguridad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="py-4" aria-labelledby="titulo-proyectos">
+      <h2 id="titulo-proyectos" class="mb-4">Proyectos</h2>
+
+      <div class="alert alert-light" role="status">
+        Aún no he publicado proyectos aquí. Próximamente agregaré mis trabajos.
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-4" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto" class="mb-4">Contacto</h2>
+
+      <div class="text-center mb-4" aria-hidden="true">
+        <div class="contact-icon">✉️</div>
+      </div>
+
+      <!-- LINKS -->
+      <div class="contact-links mb-4">
+        <a href="https://www.pabasa.com" class="link-strong">Visitar pabasa.com</a>
+
+        <a href="mailto:branni.bazurto@uisek.edu.ec" class="link-strong">
+          Enviar correo a branni.bazurto@uisek.edu.ec
+        </a>
+
+        <a href="tel:+5939996014318" class="link-strong">
+          Llamar al +593 999 601 4318
+        </a>
+      </div>
+
+      <!-- Formulario -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <form class="p-3 border rounded" aria-label="Formulario de contacto">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input id="nombre" name="nombre" type="text" class="form-control" autocomplete="name" />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo</label>
+              <input id="email" name="email" type="email" class="form-control" autocomplete="email" />
+            </div>
+
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" class="form-control" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-top">
+    <div class="container py-4">
+      <small>&copy; <span id="anio"></span> Branni Bazurto</small>
+    </div>
+  </footer>
+
+  <!-- Heatmap overlay (superpuesto) -->
+  <div id="heatmapContainer" aria-hidden="true"></div>
+
+  <!-- Panel de control -->
+  <div class="tracker-panel" role="region" aria-label="Panel de eye-tracking">
+    <button id="startBtn" class="btn btn-success">Iniciar (30s)</button>
+    <button id="stopBtn" class="btn btn-danger" disabled>Detener</button>
+    <button id="clearBtn" class="btn btn-secondary">Limpiar mapa</button>
+
+    <p class="small mt-2 mb-0">
+      Tarea: <strong>Encuentra y haz clic en “Contáctame (CTA)”</strong>.
+    </p>
+  </div>
+
+  <script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Librerías -->
+  <script src="https://webgazer.cs.brown.edu/webgazer.js"></script>
+  <script src="https://unpkg.com/heatmap.js@2.0.5/build/heatmap.min.js"></script>
+  <script src="eye-tracking.js"></script>
+</body>
+</html>
